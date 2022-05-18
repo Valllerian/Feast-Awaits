@@ -18,6 +18,16 @@ a {
   box-sizing: border-box;
 }
 
+.ready-button {
+padding-top: 9vh;
+padding-bottom:  9vh;
+padding-left: 10vw;
+padding-right: 10vw;
+left: 35vw;
+bottom:4vh;
+border: #3E0B66 solid 8px
+}
+
 .video-docker video {
   top: 50%;
   left: 50%;
@@ -30,7 +40,7 @@ a {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.6);
+  
   z-index: 1;
 }
 

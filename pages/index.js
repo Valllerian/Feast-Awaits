@@ -18,7 +18,8 @@ export default function Home() {
     </div>
     <div className="video-content space-y-2">
     <Link href="/suggestion">
- <button className="">I`m ready for it!</button>
+ 
+ <button type="button" className="absolute ready-button  m-12 text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-xl  text-center mr-2 mb-2">I`m ready for it!</button>
     </Link>
     </div>
 </section>
