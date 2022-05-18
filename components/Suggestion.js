@@ -38,7 +38,9 @@ export default function Suggestion({ onSubmitted }) {
   };
 
   useEffect(() => {
-    if (userPreferance.length !== 0) setIsEnabled(true);
+    if (userPreferance.length !== 0){ 
+      localStorage.setItem('preference', JSON.stringify(userPreferance))
+      setIsEnabled(true)}
     else setIsEnabled(false);
   }, [userPreferance]);
 
@@ -65,7 +67,9 @@ export default function Suggestion({ onSubmitted }) {
       <input
         type="submit"
         value="Let`s Feast!"
-        className={`shadow-sm shadow-black p-2 mt-3 text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-xl  text-center mr-2 mb-2 ${isEnabled ? "" : "opacity-25"}`}
+        className={`shadow-sm shadow-black p-2 mt-3 text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-xl  text-center mr-2 mb-2 ${
+          isEnabled ? "" : "opacity-25"
+        }`}
         disabled={!isEnabled}
       />
     </form>
