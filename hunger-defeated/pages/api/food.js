@@ -1,13 +1,14 @@
 import { Configuration, OpenAIApi } from 'openai';
 
 const configuration = new Configuration({
-	apiKey: process.env.REACT_APP_OPENAI_SECRET,
+	apiKey: process.env.SECRET,
 });
 const openai = new OpenAIApi(configuration);
-
+console.log(process.env.SECRET);
 
 export default async function handler(req, res) {
 	const { productName} = req.body;
+	
 	const completion = await openai.createCompletion('text-davinci-002', {
 		prompt: setPrompt(productName),
 		temperature: 0.6,

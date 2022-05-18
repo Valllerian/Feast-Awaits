@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 export default function Suggestion({ onSubmitted }) {
-
   const [userPreferance, setUserPreferance] = useState("");
   const [isEnabled, setIsEnabled] = useState(false);
 
   const onSubmit = (e) => {
     e.preventDefault();
     const req = {
-        userPreferance: userPreferance,
+      userPreferance: userPreferance,
     };
-    fetch("/api/generateFood", {
+   
+
+    fetch("/api/food", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -38,24 +39,16 @@ export default function Suggestion({ onSubmitted }) {
   };
 
   useEffect(() => {
-    if (
-        userPreferance.length !== 0 
-    )
-      setIsEnabled(true);
+    if (userPreferance.length !== 0) setIsEnabled(true);
     else setIsEnabled(false);
   }, [userPreferance]);
 
   return (
-    <form
-      className=""
-      onSubmit={onSubmit}
-    >
-      <h1 className="">
-       Just let me know what you like! 
-      </h1>
+    <form className="" onSubmit={onSubmit}>
+      <h1 className="">Just let me know what you like!</h1>
       <div className="">
         <label className="mb-2" htmlFor="preference">
-          Enter preferences: 
+          Enter preferences:
         </label>
         <input
           id="preference"
@@ -66,16 +59,11 @@ export default function Suggestion({ onSubmitted }) {
           className=""
         />
       </div>
-      
-    
+
       <input
         type="submit"
         value="Let`s Feast!"
-        className={`mt-5 py-3 rounded-md ${
-          isEnabled
-            ? ""
-            : ""
-        }`}
+        className={`mt-5 py-3 rounded-md ${isEnabled ? "" : ""}`}
         disabled={!isEnabled}
       />
     </form>
