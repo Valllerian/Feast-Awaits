@@ -1,34 +1,89 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# A Feast Awaits! 
 
-## Getting Started
+## Description
 
-First, run the development server:
+A simple app built in React, using NextJs, Tailwind and OpenAI.
+Just tell them what you like and get some interesting snack ideas! 
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+- [Collaborators](#Collaborators)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Installation
+Current project has been saved in my personal GitHub repository and is currently available for cloning and reviews on:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+https://github.com/Valllerian/Feast-Awaits
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Usage
 
-## Learn More
+Access the deployed app on: 
 
-To learn more about Next.js, take a look at the following resources:
+...COMING SOON...
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+Main page of the website.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<br>
+<img alt="Main page" src="./assets/main.jpg" />
+<br>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Click the button to be redirected to the prompt page.
+
+<br>
+<img alt="Button to start the process" src="./assets/main-button.gif" />
+<br>
+
+
+Input line for user preference reference.
+
+<br>
+<img alt="Main page" src="./assets/input-line.gif" />
+<br>
+
+Result displayed on the page - both OpenAI response and user`s prompt.
+
+<br>
+<img alt="Main page" src="./assets/results.jpg" />
+<br>
+
+Multiple results are shown on the page.
+
+<br>
+<img alt="Main page" src="./assets/multiple-results.gif" />
+<br>
+
+
+
+
+## Credits
+
+Talwind instalation guide: 
+<br>
+https://tailwindcss.com/docs/guides/create-react-app
+
+Open AI documentation:
+<br>
+https://beta.openai.com/docs/introduction
+
+Vista for creating free images:
+<br>
+https://create.vista.com/home/
+
+Some music to keep me going:
+<br>
+https://music.youtube.com/watch?v=Q7yVCwgC2P0&list=RDAMVMQ7yVCwgC2P0
+
+## License
+Current project is unlicensed. Which means - "Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means." (Quote for source #3)
+
+## Collaborators:
+
+Valerii Bihun: valeriibihun.co@gmail.com;
