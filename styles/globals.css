@@ -28,6 +28,11 @@ bottom:4vh;
 border: #3E0B66 solid 8px
 }
 
+.response-page {
+  background-image: url("../public/background/background-second.png") ;     
+  background-size: cover;
+}
+
 .video-docker video {
   top: 50%;
   left: 50%;

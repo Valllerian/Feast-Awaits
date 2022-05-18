@@ -9,7 +9,7 @@ export default function Ad() {
 		setRes(value);
 	};
 	return (
-		<div className=''>
+		<div className='h-screen flex flex-col items-center justify-center response-page'>
 			<Suggestion onSubmitted={handleSubmit} />
 			<div className=''>
 				<h1 className=''>Displaying OpenAI bot response here:</h1>
