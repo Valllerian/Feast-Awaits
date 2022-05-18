@@ -18,5 +18,5 @@ export default async function handler(req, res) {
 }
 
 function setPrompt(userPreferance) {
-	return `Suggest a user something to snack on considering their ${userPreferance} with these preferences. Provide a recipe or the place where they can get it. Refer to the user as Dear Guest # and a random 6 digit number. Talk in a very polite and old-fashioned manner. Wish them a good day and say something nice.`;
+	return `Suggest a user something to snack on considering their ${userPreferance} with these preferences. Provide a detailed step by step recipe or the place where they can get it. Refer to the user as Dear Guest # and a random 6 digit number. Talk in a very polite and old-fashioned manner. Wish them a good day and say something nice.`;
 }
