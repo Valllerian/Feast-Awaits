@@ -30,6 +30,10 @@ border: #3E0B66 solid 8px;
 font-size: 25px;
 }
 
+.back-button {
+  border: #3E0B66 solid 4px;
+}
+
 .response-page {
   background-image: url("../public/background/background-second.png") ;     
   background-size: cover;
