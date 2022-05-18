@@ -7,16 +7,19 @@ export default function Suggest() {
   const [allResponses, setAllResponses] = useState([{}]);
 
   useEffect(() => {
-    setUserPreference(localStorage.getItem("preference"));
     if (response !== "") {
+      let newPreference = userPreference;
       setAllResponses([
         ...allResponses,
-        { response: response, preference: userPreference },
+        { response: response, preference: newPreference },
       ]);
+  
     }
+    
   }, [response]);
 
   const handleSubmit = (value) => {
+    setUserPreference(localStorage.getItem("preference"));
     setResponse(value);
   };
 
