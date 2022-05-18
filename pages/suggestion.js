@@ -2,10 +2,13 @@ import Suggestion from "../components/Suggestion";
 import { useState, useEffect } from "react";
 
 export default function Suggest() {
+  // Setting up states to keep all of the current data;
   const [response, setResponse] = useState("");
   const [userPreference, setUserPreference] = useState("");
+  // An array for all responses + user references;
   const [allResponses, setAllResponses] = useState([{}]);
 
+  // UseEffect that triggered whenever response value is updated;
   useEffect(() => {
     if (response !== "") {
       let newPreference = userPreference;

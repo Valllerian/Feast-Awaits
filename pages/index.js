@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+
+// Main page:
 export default function Home() {
   return (
     <section className="relative h-screen flex flex-col items-center justify-center text-center text-white py-0 px-3">

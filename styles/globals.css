@@ -35,6 +35,8 @@ font-size: 25px;
   background-size: cover;
 }
 
+/* Some extra styles for the video background */
+
 .video-docker video {
   top: 50%;
   left: 50%;
