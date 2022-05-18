@@ -22,8 +22,7 @@ https://github.com/Valllerian/Feast-Awaits
 
 Access the deployed app on: 
 
-...COMING SOON...
-
+https://feast-awaits.vercel.app/
 
 
 Main page of the website.
