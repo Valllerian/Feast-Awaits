@@ -7,15 +7,13 @@ const openai = new OpenAIApi(configuration);
 
 export default async function handler(req, res) {
   const { userPreferance } = req.body;
-//   console.log(req.body)
   const completion = await openai.createCompletion("text-davinci-002", {
     prompt: setPrompt(userPreferance),
     temperature: 0.6,
     max_tokens: 1000,
   });
-  console.log({ result: completion.data.choices[0].text})
-  res.status(200).json({ result: completion.data.choices[0].text})
-  
+  console.log({ result: completion.data.choices[0].text });
+  res.status(200).json({ result: completion.data.choices[0].text });
 }
 
 function setPrompt(userPreferance) {

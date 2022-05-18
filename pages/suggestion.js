@@ -13,9 +13,7 @@ export default function Suggest() {
         ...allResponses,
         { response: response, preference: newPreference },
       ]);
-  
     }
-    
   }, [response]);
 
   const handleSubmit = (value) => {
