@@ -1,0 +1,1 @@
+import Suggestion from '../components/Suggestion';
