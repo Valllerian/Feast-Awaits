@@ -75,7 +75,7 @@ https://create.vista.com/home/
 
 Some music to keep me going:
 <br>
-https://music.youtube.com/watch?v=Q7yVCwgC2P0&list=RDAMVMQ7yVCwgC2P0
+https://www.youtube.com/watch?v=sellkoKeucE
 
 ## License
 Current project is unlicensed. Which means - "Anyone is free to copy, modify, publish, use, compile, sell, or
