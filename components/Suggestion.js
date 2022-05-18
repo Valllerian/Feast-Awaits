@@ -46,7 +46,7 @@ export default function Suggestion({ onSubmitted }) {
 
   return (
     <form
-      className="text-center text-white bg-[#231437] rounded-lg p-4 shadow-xl shadow-black "
+      className="text-center text-white bg-[#231437] rounded-lg p-4 shadow-xl shadow-black mb-3"
       onSubmit={onSubmit}
     >
       <h1 className="text-lg">Feeling like having a little snack?</h1>

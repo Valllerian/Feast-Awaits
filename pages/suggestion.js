@@ -8,36 +8,36 @@ export default function Suggest() {
 
   useEffect(() => {
     setUserPreference(localStorage.getItem("preference"));
-if(response !== ''){
-	setAllResponses([...allResponses, {response: response, preference: userPreference}]);
-}
+    if (response !== "") {
+      setAllResponses([
+        ...allResponses,
+        { response: response, preference: userPreference },
+      ]);
+    }
   }, [response]);
 
   const handleSubmit = (value) => {
     setResponse(value);
   };
 
-    
   return (
     <div className="h-screen flex flex-col items-center justify-center response-page ">
+      <p className="text-center text-white bg-[#231437] rounded-lg p-4 shadow-xl shadow-black m-3 ">
+        {" "}
+      </p>
       <Suggestion onSubmitted={handleSubmit} />
       <div className=" flex flex-col items-center justify-center ">
-        <h1 className="m-5"></h1>
-        {/* {response.length !== 0 ? (
-          <div className="text-center text-white bg-[#231437] rounded-lg p-4 w-2/6 shadow-xl shadow-black">
-            <p>Your preference: {userPreference}</p>
-            <p>{response}</p>{" "}
-          </div>
-        ) : null} */}
-
-{allResponses.length !== 0 ? ( allResponses.map((prompt) => (
-              <div key='' className="text-center text-white bg-[#231437] rounded-lg p-4 w-2/6 shadow-xl shadow-black m-3">
-                <p>Your preference: {prompt.preference}</p>
+        {allResponses.length !== 0 || allResponses.length > 2
+          ? allResponses.map((prompt) => (
+              <div
+                key={prompt.preference}
+                className="text-center text-white bg-[#231437] rounded-lg p-4 w-2/6 shadow-xl shadow-black m-3 "
+              >
+                <p> {prompt.preference}</p>
                 <p>{prompt.response}</p>{" "}
               </div>
-			  )
-            ) ) : null}
-
+            ))
+          : null}
       </div>
     </div>
   );
