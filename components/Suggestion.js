@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 export default function Suggestion({ onSubmitted }) {
+  // Setting up states to keep user input:
   const [userPreferance, setUserPreferance] = useState("");
+  // State that 'activates' the submit button depending on the input;
   const [isEnabled, setIsEnabled] = useState(false);
 
   const onSubmit = (e) => {
@@ -9,6 +11,7 @@ export default function Suggestion({ onSubmitted }) {
       userPreferance: userPreferance,
     };
 
+    // Sending a post request to the OpenAI;
     fetch("/api/food", {
       method: "POST",
       headers: {
@@ -23,10 +26,12 @@ export default function Suggestion({ onSubmitted }) {
       });
   };
 
+  // Refreshing the input line;
   const refresh = () => {
     setUserPreferance("");
   };
 
+  // Updating state value while typing;
   const handleChange = (e) => {
     switch (e.target.id) {
       case "preference":
@@ -37,11 +42,13 @@ export default function Suggestion({ onSubmitted }) {
     }
   };
 
+  // Saving userPref in local storage to later use it on the list;
+  // Plus every time the preference updates the button is activated (enabled if the value exists)
   useEffect(() => {
-    if (userPreferance.length !== 0){ 
-      localStorage.setItem('preference', JSON.stringify(userPreferance))
-      setIsEnabled(true)}
-    else setIsEnabled(false);
+    if (userPreferance.length !== 0) {
+      localStorage.setItem("preference", JSON.stringify(userPreferance));
+      setIsEnabled(true);
+    } else setIsEnabled(false);
   }, [userPreferance]);
 
   return (
